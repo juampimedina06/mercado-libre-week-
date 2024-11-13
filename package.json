@@ -1,0 +1,14 @@
+{
+  "name": "mercado-week",
+  "version": "1.0.0",
+  "description": "pagina para agregar, actualizar y eliminar productos",
+  "main": "swiper.js",
+  "scripts": {
+    "start": "json-server --watch ./database/db.json --port 3001"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.3"
+  }
+}

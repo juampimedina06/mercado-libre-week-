@@ -1,0 +1,46 @@
+{
+  "productos": [
+    {
+      "id": "1",
+      "tituloProducto": "Compralo de nuevo",
+      "imagenProducto": "https://http2.mlstatic.com/D_NQ_NP_882636-MLU75591903237_042024-O.webp",
+      "nombreProducto": "Creatina Micronizada (300 Grs) - Ena Sport",
+      "precioProducto": "$31.455"
+    },
+    {
+      "id": "2",
+      "tituloProducto": "Nuevo lanzamiento",
+      "imagenProducto": "https://http2.mlstatic.com/D_NQ_NP_748098-MLU75806266862_042024-O.webp",
+      "nombreProducto": "Smart TV 50'' Samsung 4K",
+      "precioProducto": "$479.999"
+    },
+    {
+      "id": "3",
+      "tituloProducto": "Oferta limitada",
+      "imagenProducto": "https://http2.mlstatic.com/D_Q_NP_2X_742557-MLA77484310935_072024-AB.webp",
+      "nombreProducto": "calzado para mujer nike negro",
+      "precioProducto": "$44.999"
+    },
+    {
+      "id": "4",
+      "tituloProducto": "Para el gimnasio",
+      "imagenProducto": "https://http2.mlstatic.com/D_Q_NP_2X_858541-MLU79001110750_092024-E.webp",
+      "nombreProducto": "Banco de pesas ajustable de color negro",
+      "precioProducto": "$10.799"
+    },
+    {
+      "id": "5",
+      "tituloProducto": "Recomendado",
+      "imagenProducto": "https://http2.mlstatic.com/D_Q_NP_2X_740006-MLU72845191720_112023-V.webp",
+      "nombreProducto": "Notebook Inspiron 3515 15.5 color plateado",
+      "precioProducto": "$219.999"
+    },
+    {
+      "id": "6",
+      "tituloProducto": "Más vendido",
+      "imagenProducto": "https://http2.mlstatic.com/D_Q_NP_2X_869799-MLA48624874701_122021-V.webp",
+      "nombreProducto": "Cafetera DeLonghi Magnifica S",
+      "precioProducto": "$99.999"
+    }
+  ]
+}

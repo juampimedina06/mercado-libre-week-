@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mercado Week</title>
+  <!-- Puedes agregar estilos en línea o un link a tu archivo CSS -->
+  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="icon" href="/img/icono-mercadolibre.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+        <!-- Logo de Mercado Libre -->
+        <div class="contenedor-nav">
+            <a class="nav-logo" href="inicio.html">
+              <img class="imagen_mercado_libre" src="/img/mercadolibre.PNG" alt="Logo Mercado Libre">
+            </a>
+            <!-- Barra de búsqueda -->
+            <div class="contenedor-form">
+              <form action="" class="nav-form">
+                <input 
+                  type="text"
+                  id="buscar"
+                  class="nav-search-input" 
+                  placeholder="Buscar productos, marcas y más…" 
+                  maxlength="120" 
+                  role="combobox"
+                  data-busqueda
+                >
+                <button type="submit" class="boton-buscar" data-boton-busqueda>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"/>
+                    <path d="M21 21l-6 -6"/>
+                  </svg>
+                </button>
+              </form>
+            </div>
+            <a class="agregar-producto" href="cargarProducto.html">Agregar producto</a>
+
+        </div>
+
+        <div class="contenedor-nav-two">
+          <div class="contenedor-ubicacion">
+            <a class="icono-ubicacion" href="">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 20.8995L16.9497 15.9497C19.6834 13.2161 19.6834 8.78392 16.9497 6.05025C14.2161 3.31658 9.78392 3.31658 7.05025 6.05025C4.31658 8.78392 4.31658 13.2161 7.05025 15.9497L12 20.8995ZM12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 13.8492 18.364 17.364L12 23.7279ZM12 13C13.1046 13 14 12.1046 14 11C14 9.89543 13.1046 9 12 9C10.8954 9 10 9.89543 10 11C10 12.1046 10.8954 13 12 13ZM12 15C9.79086 15 8 13.2091 8 11C8 8.79086 9.79086 7 12 7C14.2091 7 16 8.79086 16 11C16 13.2091 14.2091 15 12 15Z"></path></svg>
+            </a>
+            <div  class="texto-ubicacion">
+                <span class="envio-ubicacion">Enviar a juampi</span>
+                <span class="informacion-ubicacion">Solares 1234</span>
+            </div>
+        </div>
+        <!-- Links de categorías -->
+        <div class="contenedor-lista">
+          <ul class="nav-categorias">
+            <li class="lista-categoria"><a href="#">Categorías</a></li>
+            <li class="lista-categoria"><a href="#">Ofertas</a></li>
+            <li class="lista-categoria"><a href="#">Historial</a></li>
+            <li class="lista-categoria"><a href="#">Supermercado</a></li>
+            <li class="lista-categoria"><a href="#">Moda</a></li>
+            <li class="lista-categoria"><a href="#">Mercado play</a></li>
+            <li class="lista-categoria"><a href="#">Vender</a></li>
+            <li class="lista-categoria"><a href="#">Ayuda</a></li>
+        </ul>
+        </div>
+
+        <!-- Zona de usuario y carrito -->
+        <div class="nav-user">
+          <div class="sesion">
+            <img class="persona" src="https://img.freepik.com/foto-gratis/cierre-dientes-hombre-moreno-sonriendo_1187-5800.jpg" alt="">
+            <a class="nombre" href="#">JUAN P.</a>
+          </div>
+          <a class="info" href="">Mis compras</a>
+          <a class="info" href="">Favoritos</a>
+            <a href="" class="notificacion"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-bell"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" /><path d="M9 17v1a3 3 0 0 0 6 0v-1" /></svg></a>
+            <a href="#" class="carrito">
+              <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
+            </a>
+          </div>
+        </div>
+        </nav>
+      </header>
+
+  <main class="main">
+    <div class="contenedor-swyper-productos">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="https://http2.mlstatic.com/D_NQ_633649-MLA80229341367_102024-OO.webp" alt=""></div>
+          <div class="swiper-slide"><img src="https://http2.mlstatic.com/D_NQ_647181-MLA80229549941_102024-OO.webp" alt=""></div>
+          <div class="swiper-slide"><img src="https://http2.mlstatic.com/D_NQ_803836-MLA80020175658_102024-OO.webp" alt=""></div>
+          <div class="swiper-slide"><img src="https://http2.mlstatic.com/D_NQ_644666-MLA80019766720_102024-OO.webp" alt=""></div>
+          <div class="swiper-slide"><img src="https://http2.mlstatic.com/D_NQ_835037-MLA80228736389_102024-OO.webp" alt=""></div>
+          <div class="swiper-slide"><img src="https://http2.mlstatic.com/D_NQ_860893-MLA79974224942_102024-OO.webp" alt=""></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <section class="seccion-productos">
+          <ul class="contenedor-productos" data-lista>
+          </ul>
+      </section>
+    </div>
+
+    
+    
+    <section class="buscando">
+          <div class="contenedor-producto-noencontrado">
+            <div class="contenedor-lupa">
+                <img class="lupa" src="https://http2.mlstatic.com/frontend-assets/search-nordic/not-found.svg" alt="">
+            </div>
+            <div class="textos-noencontrado">
+                <h2 class="titulo-noencontrado">Escribí en el buscador lo que querés encontrar.</h2>
+                <ul class="listas-noencontrado">
+                  <li><span class="escribi">Escribí tu búsqueda</span> en el campo que figura en la parte superior de la pantalla.
+                    </li>
+                  <li><span class="ayuda">Fijate si has escrito bien el producto</span> que estas buscando.</li>
+                </ul>
+            </div>
+        </div>
+        </section>
+    </main>
+
+  <footer>
+    <div class="footer-info">
+        <div class="footer-box">
+            <h4>Botón de arrepentimiento</h4>
+            <a href="#">Cómo cancelar una compra</a>
+        </div>
+        <div class="footer-box">
+            <h4>¿Conocés las normas que protegen tu compra?</h4>
+            <a href="#">Ver contratos de adhesión - Ley N° 24.240</a>
+            <a href="#">de Defensa del Consumidor</a>
+        </div>
+    </div>
+    <div class="footer-links">
+        <a href="#">Trabajá con nosotros</a>  
+        <a href="#">Términos y condiciones</a>  
+        <a href="#">Promociones</a>
+        <a href="#">Cómo cuidamos tu privacidad</a>
+        <a href="#">Accesibilidad</a>
+        <a href="#">Información al usuario financiero</a>
+        <a href="#">Ayuda</a>
+        <a href="#">Defensa del Consumidor</a>
+        <a href="#">Información sobre seguros</a>
+        <a href="#">Libro de quejas online</a>
+    </div>
+    <p class="footer-copyright">
+        Alura Latam © 2024 Mercado Week <br>
+        Desarrollado por juan pablo medina. 
+    </p>
+</footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="/js/swiper.js"></script>
+  <script src="/js/mostrarProductos.js" type="module"></script>
+  <script type="module" src="/js/buscarProducto.js"></script>
+  <script type="module" src="/js/eliminarProducto.js"></script>
+</body>
+</html>
