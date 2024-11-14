@@ -766,15 +766,17 @@ input[type="number"]:focus {
     top: 1px;
   }
   .agregar-producto{
-    font-size: 8px;
+    font-size: 10px;
     width: 6rem;
     height: 2rem;
-    padding: 10px;
+    padding: 5px;
   }
   input[type="text"],
   input[type="url"],
   input[type="number"] {
   padding: 5px;
+  table-layout: fixed;
+  padding: 0 30px 0 0;
   font-size: 10px;
   height: 2rem;
 
@@ -795,12 +797,39 @@ input[type="number"]:focus {
     margin-left: 0;
   }
 
+  .producto{
+    height: auto;
+  }
+  .contenedor-imagen-producto{
+    height: 20rem;
+    padding: 2rem;
+  }
+  .nombre-producto{
+    height: 0;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  .precio-producto{
+    padding: .5rem 1rem 0.2rem 1rem;
+    font-weight: 450;
+  }
+
   .contenedor-producto-encontrado{
     flex-direction: column;
     width: 90%;
     height: auto;
     margin: .1rem 0 1rem 0;
   }
+
+  .contenedor-producto-noencontrado{
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+  .lupa{
+    margin: 0;
+  }
+
   footer{
     display: none;
   }

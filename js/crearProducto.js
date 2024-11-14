@@ -19,7 +19,7 @@ async function crearProducto(evento) {
         await conexionAPI.enviarProducto(tituloProducto, imagenProducto, nombreProducto, precioProducto);
         contenedorAlerta.style.display="flex"
         alertaExitosa.style.display="flex"
-        window.location.href = "/html/inicio.html";
+        window.location.href = "index.html";
     } catch(e) {
         contenedorAlerta.style.display="flex"
         alertaError.style.display="flex"

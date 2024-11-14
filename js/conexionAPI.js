@@ -1,24 +1,30 @@
 async function listarProductos() {
     const conexion = await fetch("https://api-fake-gilt.vercel.app/productos");
-    const conexionConvertida = conexion.json();
+    const conexionConvertida = await conexion.json();
 
     return conexionConvertida
 }
 
 async function enviarProducto(tituloProducto, imagenProducto, nombreProducto, precioProducto) {
-    const conexion = await fetch("https://api-fake-gilt.vercel.app/productos",{
-        method:"POST",
-        headers:{"Content-type":"application/json"},
-        body:JSON.stringify({
-            tituloProducto:tituloProducto,
-            imagenProducto:imagenProducto,
-            nombreProducto:nombreProducto,
-            precioProducto:`$${precioProducto}`
-        })
-    })
-    const conexionConvertida = conexion.json();
+    try {
+        const conexion = await fetch("https://api-fake-gilt.vercel.app/productos", {
+            method: "POST",
+            headers: { "Content-type": "application/json" },
+            body: JSON.stringify({
+                tituloProducto: tituloProducto,
+                imagenProducto: imagenProducto,
+                nombreProducto: nombreProducto,
+                precioProducto: `$${precioProducto}`,
+            })
+        });
 
-    return conexionConvertida
+        if (!conexion.ok) throw new Error(`Error HTTP: ${conexion.status}`);
+
+        const conexionConvertida = await conexion.json();
+        return conexionConvertida;
+    } catch (error) {
+        console.error("Hubo un error al enviar el producto:", error);
+    }
 }
 
 //!PARA USAR LA BARRA DE BUSQUEDA
@@ -28,29 +34,37 @@ async function buscarProductos(palabraClave) {
     return conexionConvertida;
 }
 
-export async function eliminarProducto(id) {
-    const confirmarEliminacion = confirm("¿Seguro quieres eliminar el producto?");
 
-    if (confirmarEliminacion === true) {
-        try {
-            const response = await fetch(`https://api-fake-gilt.vercel.app/productos${id}`, {
-                method: 'DELETE',
-            });
 
-            if (!response.ok) {
-                throw new Error('No se pudo eliminar el producto');
-            }
+async function eliminarProducto(id) {
+    const confirmarEliminacion = confirm("¿Estás seguro de que querés eliminar el producto?");
 
-            return response;
-        } catch (error) {
-            console.error('Error al eliminar el producto:', error);
-            alert('Hubo un problema al eliminar el producto.');
-        }
-    } else {
+    if (!confirmarEliminacion) {
         console.log('Eliminación cancelada');
+        return;
+    }
+
+    try {
+        const response = await fetch(`https://api-fake-gilt.vercel.app/productos/${id}`, {
+            method: 'DELETE',
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
+
+        return response;
+
+    } catch (error) {
+        console.error('Error al eliminar el producto:', error);
+        alert('Hubo un problema al eliminar el producto. Por favor, intentá de nuevo.');
     }
 }
 
+
+
 export const conexionAPI={
-    listarProductos, enviarProducto,buscarProductos,eliminarProducto
+    listarProductos, 
+    enviarProducto,
+    buscarProductos,
+    eliminarProducto
 }
