@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargar Producto</title>
+    <link rel="icon" href="/img/icono-mercadolibre.png" type="image/x-icon">
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+    <header class="header-agregar-productos">
+        <nav class="nav-agregar-productos">
+        <!-- Logo de Mercado Libre -->
+        <div class="contenedor-agregar-logo">
+            <div class="nav-logo">
+                    <a href="index.html">
+                      <img class="imagen_mercado_libre" src="/img/mercadolibre.PNG" alt="Logo Mercado Libre">
+                    </a>
+            </div>  
+        </div>
+
+        </nav>
+      </header>
+
+      <main>
+        <section class="formulario">
+          <div class="form-container">
+            <h2>Agregar Producto</h2>
+            <form data-formulario>
+              <div class="form-group">
+                <label for="title">Título</label>
+                <input type="text" id="title" name="title" maxlength="18" required data-titulo><!--!MAX 18 CARACTERES-->
+              </div>
+              <div class="form-group">
+                <label for="imageUrl">URL de la Imagen</label>
+                <input type="url" id="imageUrl" name="imageUrl" required data-url>
+              </div>
+              <div class="form-group">
+                <label for="productName">Nombre del Producto</label>
+                <input type="text" id="productName" name="productName" minlength="27" maxlength="41" required data-nombre><!--!MIN 27, MAX 41 caracteres-->
+              </div>
+              <div class="form-group">
+                <label for="price">Precio</label>
+                <input type="number" id="price" name="price" min="0" max="100000" step="0.01" required data-precio> 
+              </div>
+              <button type="submit" class="btn-submit">Agregar Producto</button>
+            </form>
+            
+          </div>
+          
+          <!--! AGREGADO EXITOSAMENTE O ERROR-->
+          <div class="overlay">
+            <!-- Alerta de producto agregado correctamente -->
+            <div class="producto-agregado-exitosamente">
+              <span class="close-btn">&times;</span>
+              ¡Producto agregado correctamente!
+            </div>
+          
+            <!-- Alerta de error al agregar el producto -->
+            <div class="producto-agregado-erroneamente">
+              <span class="close-btn">&times;</span>
+              No se pudo agregar el producto. Inténtalo de nuevo.
+            </div>
+          </div>
+          
+          
+        </section>
+        
+      </main>
+      <script src="/js/crearProducto.js" type="module"></script>
+</body>
+</html>

@@ -1,14 +1,14 @@
 {
-  "name": "mercado-week",
+  "name": "alura-week",
   "version": "1.0.0",
-  "description": "pagina para agregar, actualizar y eliminar productos",
-  "main": "swiper.js",
+  "description": "pagina para agregar productos",
+  "main": "index.js",
   "scripts": {
-    "start": "json-server --watch ./database/db.json --port 3001"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "json-server": "^0.17.3"
+    "json-server": "^1.0.0-beta.3"
   }
 }
