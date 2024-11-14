@@ -1,12 +1,12 @@
 async function listarProductos() {
-    const conexion = await fetch("http://localhost:3001/productos");
+    const conexion = await fetch("https://api-fake-gilt.vercel.app/productos");
     const conexionConvertida = conexion.json();
 
     return conexionConvertida
 }
 
 async function enviarProducto(tituloProducto, imagenProducto, nombreProducto, precioProducto) {
-    const conexion = await fetch("http://localhost:3001/productos",{
+    const conexion = await fetch("https://api-fake-gilt.vercel.app/productos",{
         method:"POST",
         headers:{"Content-type":"application/json"},
         body:JSON.stringify({
@@ -23,7 +23,7 @@ async function enviarProducto(tituloProducto, imagenProducto, nombreProducto, pr
 
 //!PARA USAR LA BARRA DE BUSQUEDA
 async function buscarProductos(palabraClave) {
-    const conexion = await fetch(`http://localhost:3001/productos?q=${palabraClave}`) //! USAR q=tal cosa para poder buscar el video
+    const conexion = await fetch(`https://api-fake-gilt.vercel.app/productos?q=${palabraClave}`) //! USAR q=tal cosa para poder buscar el video
     const conexionConvertida = conexion.json();
     return conexionConvertida;
 }
@@ -33,7 +33,7 @@ export async function eliminarProducto(id) {
 
     if (confirmarEliminacion === true) {
         try {
-            const response = await fetch(`http://localhost:3001/productos/${id}`, {
+            const response = await fetch(`https://api-fake-gilt.vercel.app/productos${id}`, {
                 method: 'DELETE',
             });
 
@@ -50,10 +50,6 @@ export async function eliminarProducto(id) {
         console.log('Eliminación cancelada');
     }
 }
-
-
-
-
 
 export const conexionAPI={
     listarProductos, enviarProducto,buscarProductos,eliminarProducto
